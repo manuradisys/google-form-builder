@@ -1,17 +1,14 @@
 {
-  "name": "form-builder-app",
-  "version": "1.0.0",
-  "type": "module",
-  "scripts": {
-    "clean": "rimraf public/dist",
-    "build": "npm run clean && tsc",
-    "watch": "tsc --watch",
-    "serve": "http-server ./public -c-1",
-    "start": "npm run build && npm run serve"
+  "compilerOptions": {
+    "target": "ES2015",
+    "module": "ES2015",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "./public/dist",
+    "rootDir": "./src",
+    "moduleResolution": "node"
   },
-  "devDependencies": {
-    "typescript": "^5.0.0",
-    "http-server": "^14.1.1",
-    "rimraf": "^5.0.0"
-  }
+  "include": ["src/**/*"]
 }
